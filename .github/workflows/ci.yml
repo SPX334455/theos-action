@@ -17,11 +17,8 @@ jobs:
         with:
           theos-sdks: 'https://github.com/theos/sdks'
 
-      - name: Upload Artifacts
+      - name: Upload Everything
         uses: actions/upload-artifact@v4
         with:
-          name: DilSihirbazi-Paket
-          path: |
-            packages/*.deb
-            .theos/obj/*.dylib
-            .theos/obj/debug/*.dylib
+          name: Tum-Dosyalar
+          path: .  # Tüm dizini paketle ki kaçamasın
