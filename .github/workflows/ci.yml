@@ -10,12 +10,18 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4 # v4 yaptık
+        uses: actions/checkout@v4
 
       - name: Build Tweak
         uses: Randomblock1/theos-action@v1
         with:
           theos-sdks: 'https://github.com/theos/sdks'
 
-      build
-No files were found with the provided path: .theos/obj/debug/DilSihirbazi.dylib. No artifacts will be uploaded.
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: DilSihirbazi-Paket
+          path: |
+            packages/*.deb
+            .theos/obj/*.dylib
+            .theos/obj/debug/*.dylib
