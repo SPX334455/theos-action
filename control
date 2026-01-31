@@ -1,0 +1,9 @@
+Package: com.seninadin.dilsihirbazi
+Name: DilSihirbazi
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Description: Uygulamayı Türkçe olduğuna ikna eder.
+Maintainer: SeninAdin
+Author: SeninAdin
+Section: Tweaks
